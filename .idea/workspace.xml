@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="loadData" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa6f5811-b0cd-4997-a705-67b707a53df1" name="Default Changelist" comment="create.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_snow_Documents_Projects_Android_3_5_JJFunny_app_libs_open_sdk_r6140_lite_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_crashreport_3_2_33_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_tencent_bugly_nativecrashreport_3_7_471_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/snowapp/jjfunny/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libcommon/src/androidTest/java/com/snowapp/libcommon/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libcommon/src/test/java/com/snowapp/libcommon/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libnetwork/schemas/com.snowapp.libnetwork.cache.CacheDatabase/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libnetwork/src/androidTest/java/com/snowapp/libnetwork/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libnetwork/src/test/java/com/snowapp/libnetwork/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle____local_aars____Users_snow_Documents_Projects_Android_3_5_ppjoke_jetpack_app_libs_open_sdk_r6140_lite_jar_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_camera_camera_camera2_1_0_0_alpha04_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_camera_camera_core_1_0_0_alpha04_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_camera_camera_extensions_1_0_0_alpha01_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_camera_camera_view_1_0_0_alpha01_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_concurrent_concurrent_futures_1_0_0_alpha03_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_beta01_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_databinding_databinding_adapters_3_5_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_databinding_databinding_common_3_5_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_databinding_databinding_runtime_3_5_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_paging_paging_common_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_paging_paging_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_beta04_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_room_room_common_2_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_room_room_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_sqlite_sqlite_2_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_sqlite_sqlite_framework_2_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_beta04_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__androidx_work_work_runtime_2_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__animal_sniffer_annotations_1_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__auto_common_0_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__auto_service_1_0_rc6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__auto_service_annotations_1_0_rc6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__checker_qual_2_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_alibaba_fastjson_1_2_59_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_aliyun_dpa_oss_android_sdk_2_9_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_9_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_9_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_9_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_9_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_github_chrisbanes_PhotoView_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_android_exoplayer_exoplayer_core_2_10_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_android_exoplayer_exoplayer_dash_2_10_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_android_exoplayer_exoplayer_ui_2_10_4_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_alpha10_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_google_guava_listenablefuture_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshHeader_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshLayout_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_squareup_okhttp3_logging_interceptor_3_5_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_11_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_4_2_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_squareup_okio_okio_2_2_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_tencent_bugly_crashreport_3_2_33_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__com_tencent_bugly_nativecrashreport_3_7_471_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__error_prone_annotations_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__fastjson_1_2_59.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__guava_27_0_1_jre.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__jp_wasabeef_glide_transformations_4_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_50_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/app/src/main/java/com/mooc/ppjoke/ui/home/FeedAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ppjoke_jetpack/libcommon/src/main/java/com/mooc/libcommon/enums/ViewType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/destination.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/destination.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcommon/src/main/res/layout/layout_empty_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/libcommon/src/main/res/layout/layout_empty_view.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="WTKDU16910003782" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>createDes</find>
+      <find>setIconSi</find>
+      <find>addView</find>
+      <find>currentApp</find>
+      <find>mBackS</find>
+      <find>setImageUrl</find>
+      <find>mContext</find>
+      <find>sConvert</find>
+      <find>mViewModel</find>
+      <find>data</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/cache/CacheManager.java" />
+        <option value="$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/cache/DateConverter.java" />
+        <option value="$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/cache/CacheDatabase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/utils/StringConvert.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_top_comment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/libcommon/src/main/java/com/snowapp/libcommon/utils/PixUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_player_view.xml" />
+        <option value="$PROJECT_DIR$/libnetwork/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/ListPlayerView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/utils/NavGraphBuilder.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/utils/AppConfig.java" />
+        <option value="$PROJECT_DIR$/libcommon/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_refresh_view.xml" />
+        <option value="$PROJECT_DIR$/libcommon/src/main/java/com/snowapp/libcommon/view/EmptyView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Comment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Ugc.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Enum/ViewType.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Enums/ViewType.java" />
+        <option value="$PROJECT_DIR$/libcommon/src/main/java/com/snowapp/libcommon/Enums/ViewType.java" />
+        <option value="$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/ApiService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
+        <option value="$PROJECT_DIR$/libcommon/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_author.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/JJImageView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/FeedAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_interaction.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Feed.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_tag.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_text.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_type_image.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_feed_type_video.xml" />
+        <option value="$PROJECT_DIR$/libcommon/src/main/res/layout/layout_empty_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/AbsViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/AbsListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/MutableDataSource.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeViewModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/login/UserManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/User.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/my/MyFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/JJApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/login/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JJFunny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JJFunny" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="JJFunny" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JJFunny" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JJFunny" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="JJFunny" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.snowapp.jjfunny.ui.login" />
+      <recent name="com.snowapp.libcommon.Enums" />
+      <recent name="com.snowapp.jjfunny.model" />
+      <recent name="com.snowapp.libnetwork.cache" />
+      <recent name="com.snowapp.libcommon.global" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/app/libs" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa6f5811-b0cd-4997-a705-67b707a53df1" name="Default Changelist" comment="" />
+      <created>1597727577312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597727577312</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add FixFragmentNavigator：自定义 FragmentNavigator，通过 hide() &amp; show() 来代替 replace()，避免生命周期的重启。">
+      <created>1597818988436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597818988436</updated>
+    </task>
+    <task id="LOCAL-00002" summary="在 onCreateView 中增加了 Log.d 打印。为了测试 fragment 切换时生命周期是否重启。">
+      <created>1597819129983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597819129983</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改了 NavGraphBuilder.build() 参数">
+      <created>1597819226939</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597819226939</updated>
+    </task>
+    <task id="LOCAL-00004" summary="用 FixFragmentNavigator 替换了 FragmentNavigator，并修改了 build() 参数。">
+      <created>1597819294548</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597819294548</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1597819415206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597819415206</updated>
+    </task>
+    <task id="LOCAL-00006" summary="remove">
+      <created>1597821517215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597821517215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="新增module(libnetwork)，主要进行网络 &amp; 数据库封装。">
+      <created>1597822229428</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597822229428</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create。封装 okHttp 请求及设置相关参数">
+      <created>1597823206085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823206085</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update. 在 &lt;application&gt; 节点中新增 android:usesCleartextTraffic=&quot;true&quot; 允许明文请求（即允许访问 http 请求）">
+      <created>1597823327855</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823327855</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update. 增加类注释头">
+      <created>1597823358255</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823358255</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update. 新增 'libnetwork'">
+      <created>1597823390766</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823390766</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update. 新增 &lt;option&gt; libnetwork">
+      <created>1597823454115</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1597823454115</updated>
+    </task>
+    <task id="LOCAL-00013" summary="udpate. 新增 fastjson 依赖">
+      <created>1597829619727</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597829619728</updated>
+    </task>
+    <task id="LOCAL-00014" summary="create. 类型转换接口">
+      <created>1597830529208</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830529208</updated>
+    </task>
+    <task id="LOCAL-00015" summary="create. Json 转换器（将json字符串转换为指定类型）">
+      <created>1597830643492</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830643492</updated>
+    </task>
+    <task id="LOCAL-00016" summary="create. 网络请求返回值结构体类">
+      <created>1597830683977</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830683977</updated>
+    </task>
+    <task id="LOCAL-00017" summary="create. url 拼接工具类">
+      <created>1597830729852</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830729852</updated>
+    </task>
+    <task id="LOCAL-00018" summary="create. Get 请求">
+      <created>1597830820116</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830820116</updated>
+    </task>
+    <task id="LOCAL-00019" summary="create. Post 请求">
+      <created>1597830849278</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1597830849278</updated>
+    </task>
+    <task id="LOCAL-00020" summary="create. 封装 okHttp 请求及设置相关参数">
+      <created>1597971042168</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971042169</updated>
+    </task>
+    <task id="LOCAL-00021" summary="create. 公共库">
+      <created>1597971103239</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971103239</updated>
+    </task>
+    <task id="LOCAL-00022" summary="create. 缓存数据库相关">
+      <created>1597971168321</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971168321</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update.">
+      <created>1597971291814</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971291814</updated>
+    </task>
+    <task id="LOCAL-00024" summary="create. 网络请求封装类">
+      <created>1597971329169</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971329169</updated>
+    </task>
+    <task id="LOCAL-00025" summary="create. 网络请求回调类">
+      <created>1597971348551</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1597971348551</updated>
+    </task>
+    <task id="LOCAL-00026" summary="create. Model 类">
+      <created>1597973585825</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1597973585825</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update. 增加 dataBinding{ enabled = true } 标识。允许使用 dataBinding 布局">
+      <created>1597974215471</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1597974215471</updated>
+    </task>
+    <task id="LOCAL-00028" summary="create. 自定义 DataBinding ImageView">
+      <created>1597975191645</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1597975191645</updated>
+    </task>
+    <task id="LOCAL-00029" summary="initCommit. 实现第一阶段功能 —— 首页列表+下拉刷新/上拉加载">
+      <created>1599471217304</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1599471217304</updated>
+    </task>
+    <task id="LOCAL-00030" summary="优化 UI 效果。">
+      <created>1599484086086</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1599484086086</updated>
+    </task>
+    <task id="LOCAL-00031" summary="create. qq 登录。2020.9.9">
+      <created>1599643622427</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1599643622428</updated>
+    </task>
+    <task id="LOCAL-00032" summary="update. 头部注解新增了 needLogin=true。2020.9.9">
+      <created>1599643730490</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1599643730490</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update. 新增了底部导航栏切换时登录拦截判断。2020.9.9">
+      <created>1599643835385</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1599643835386</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update. 新增了几个测试url。2020.9.9">
+      <created>1599643868928</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1599643868928</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update. 2020.9.9">
+      <created>1599643985353</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1599643985353</updated>
+    </task>
+    <task id="LOCAL-00036" summary="create. 2020.9.9">
+      <created>1599644018943</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644018943</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update. 修改了代码顺序。2020.9.9">
+      <created>1599644062368</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644062368</updated>
+    </task>
+    <task id="LOCAL-00038" summary="create. qq 登录 jar包。2020.9.9">
+      <created>1599644139024</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644139024</updated>
+    </task>
+    <task id="LOCAL-00039" summary="update. 新增下拉刷新 + 上拉加载逻辑。（但调试时未触发！？？尚未找到原因）。2020.9.9">
+      <created>1599644369546</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644369546</updated>
+    </task>
+    <task id="LOCAL-00040" summary="update. 修改了 userId 类型 String -&gt; long。2020.9.9">
+      <created>1599644444928</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644444928</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update. 修改了 xml 文件名。2020.9.9">
+      <created>1599644500188</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644500188</updated>
+    </task>
+    <task id="LOCAL-00042" summary="update. 新增了对 String.class 类型的判断。2020.9.9">
+      <created>1599644598054</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644598054</updated>
+    </task>
+    <task id="LOCAL-00043" summary="update. 新增了 QQ 登录相关的 Activity 声明。2020.9.9">
+      <created>1599644658865</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644658865</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update. 新增了 QQ 登录及 bugly 的依赖。2020.9.9">
+      <created>1599644714728</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644714728</updated>
+    </task>
+    <task id="LOCAL-00045" summary="create. 2020.9.9">
+      <created>1599644809761</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644809761</updated>
+    </task>
+    <task id="LOCAL-00046" summary="update. 2020.9.9">
+      <created>1599644836410</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1599644836410</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <layout>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2180937" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Build Variants" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Resources Explorer" order="7" />
+      <window_info id="Favorites" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32866043" />
+      <window_info anchor="bottom" id="TODO" order="1" weight="0.32866043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="2" visible="true" weight="0.2741433" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5024233" side_tool="true" weight="0.36933798" />
+      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.49757674" weight="0.29595014" />
+      <window_info anchor="bottom" id="Logcat" order="5" weight="0.40654206" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" weight="0.3894081" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3224299" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.40031153" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32866043" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Gradle" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Preview" order="3" weight="0.32956383" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
+    </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create. 封装 okHttp 请求及设置相关参数" />
+    <MESSAGE value="create. 公共库" />
+    <MESSAGE value="create. 缓存数据库相关" />
+    <MESSAGE value="update." />
+    <MESSAGE value="create. 网络请求封装类" />
+    <MESSAGE value="create. 网络请求回调类" />
+    <MESSAGE value="create. Model 类" />
+    <MESSAGE value="update. 增加 dataBinding{ enabled = true } 标识。允许使用 dataBinding 布局" />
+    <MESSAGE value="create. 自定义 DataBinding ImageView" />
+    <MESSAGE value="initCommit. 实现第一阶段功能 —— 首页列表+下拉刷新/上拉加载" />
+    <MESSAGE value="优化 UI 效果。" />
+    <MESSAGE value="create. qq 登录。2020.9.9" />
+    <MESSAGE value="update. 头部注解新增了 needLogin=true。2020.9.9" />
+    <MESSAGE value="update. 新增了底部导航栏切换时登录拦截判断。2020.9.9" />
+    <MESSAGE value="update. 新增了几个测试url。2020.9.9" />
+    <MESSAGE value="update. 修改了代码顺序。2020.9.9" />
+    <MESSAGE value="create. qq 登录 jar包。2020.9.9" />
+    <MESSAGE value="update. 新增下拉刷新 + 上拉加载逻辑。（但调试时未触发！？？尚未找到原因）。2020.9.9" />
+    <MESSAGE value="update. 修改了 userId 类型 String -&gt; long。2020.9.9" />
+    <MESSAGE value="update. 修改了 xml 文件名。2020.9.9" />
+    <MESSAGE value="update. 新增了对 String.class 类型的判断。2020.9.9" />
+    <MESSAGE value="update. 新增了 QQ 登录相关的 Activity 声明。2020.9.9" />
+    <MESSAGE value="update. 新增了 QQ 登录及 bugly 的依赖。2020.9.9" />
+    <MESSAGE value="create. 2020.9.9" />
+    <MESSAGE value="update. 2020.9.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="update. 2020.9.9" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/FeedAdapter.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/FeedAdapter.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/FeedAdapter.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/JJImageView.java</url>
+          <line>69</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/JJImageView.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeFragment.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeFragment.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/MutableDataSource.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>148</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>152</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>188</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/login/LoginActivity.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="sBaseUrl + url" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>sBaseUrl + url</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>T</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>mViewModel.getPageData()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>menuView.getChildAt(i)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_refresh_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0-alpha10/9c3b119abe18aec3b44b5c460e9cb9724b68ec4d/material-1.1.0-alpha10-sources.jar!/com/google/android/material/button/MaterialButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="105" column="3" lean-forward="true" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1c876210d27fd553ab04a9aca9000db9/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="1910" column="51" selection-start-line="1910" selection-start-column="51" selection-end-line="1910" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/53592eaaec8ec7c77174c6c4723a4302/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="1721" column="9" lean-forward="true" selection-start-line="1721" selection-start-column="9" selection-end-line="1721" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/icon_tag.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/icon_cell_dissed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="59" lean-forward="true" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_find.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libcommon/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_author.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#293#353#0" />
+            <element signature="e#539#553#0" expanded="true" />
+            <element signature="e#668#682#0" expanded="true" />
+            <element signature="e#719#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/ListPlayerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.0.0/2151d26c3b241f0a887f2dadb9ab091649fcf020/recyclerview-1.0.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="6781" selection-start-line="6781" selection-end-line="6781" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/Feed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="65" column="68" lean-forward="true" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82b35d036297efb40deaa5939f5ca71f/jars/classes.jar!/com/google/android/material/button/MaterialButton.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_top_comment.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_tag.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="e#577#591#0" expanded="true" />
+            <element signature="e#1013#1027#0" expanded="true" />
+            <element signature="e#1322#1336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libcommon/src/main/res/layout/layout_empty_view.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_text.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#674#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_type_video.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_type_image.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_feed_interaction.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="96" column="39" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.0.0/bcd167792ec03e930d5c8345c99ae07b2627de84/fragment-1.0.0-sources.jar!/androidx/fragment/app/FragmentManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="2274" selection-start-line="2274" selection-end-line="2274" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="2814" selection-start-line="2814" selection-end-line="2814" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.scwang.smartrefresh/SmartRefreshLayout/1.1.0/8290e56beb63bf9968e984f5cada78b02205c74f/SmartRefreshLayout-1.1.0-sources.jar!/com/scwang/smartrefresh/layout/SmartRefreshLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="1294" selection-start-line="1294" selection-end-line="1294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.paging/paging-common/2.1.0/3eddf05883b6c9203e8c19ea69a6b10e744bb762/paging-common-2.1.0-sources.jar!/androidx/paging/DataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="391" column="26" selection-start-line="391" selection-start-column="26" selection-end-line="391" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/android/os/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_layout_login.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="54" column="71" selection-start-line="54" selection-start-column="71" selection-end-line="54" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libnavannotation/src/main/java/com/snowapp/libnavannotation/FragmentDestination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="889">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/login/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="927">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/4.2.0/d89a60517bd1e90121b22510494e22497d8be28b/okhttp-4.2.0-sources.jar!/okhttp3/Call.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/GetRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/HomeViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/ApiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3034#3035#0" expanded="true" />
+            <element signature="e#3091#3092#0" expanded="true" />
+            <element signature="e#3147#3148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/login/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libnetwork/src/main/java/com/snowapp/libnetwork/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="77" column="90" selection-start-line="77" selection-start-column="90" selection-end-line="77" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/JJApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/home/FeedAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/my/MyFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="18" column="82" selection-start-line="18" selection-start-column="82" selection-end-line="18" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/AbsViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1274#1275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/view/JJImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/MutableDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snowapp/jjfunny/ui/AbsListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

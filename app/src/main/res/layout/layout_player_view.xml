@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.snowapp.jjfunny.view.JJImageView
+        android:id="@+id/blur_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/color_theme_10" />
+
+    <!-- 真正能够动态展示视频画面 View， 会动态添加到这里  -->
+
+    <com.snowapp.jjfunny.view.JJImageView
+        android:id="@+id/cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:id="@+id/play_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_video_play"/>
+
+    <!-- 视频播放时的底部进度条 -->
+    <ProgressBar
+        android:id="@+id/buffer_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/color_theme_10"
+        android:visibility="gone"/>
+
+</FrameLayout>
