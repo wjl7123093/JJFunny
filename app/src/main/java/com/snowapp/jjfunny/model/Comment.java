@@ -1,13 +1,17 @@
 package com.snowapp.jjfunny.model;
 
 import androidx.annotation.Nullable;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+
+import java.io.Serializable;
 
 /**
  * @date 2020-08-21
  * @author snow
  * @description 评论
  */
-public class Comment {
+public class Comment extends BaseObservable implements Serializable {
 
     /**
      * id : 1126
@@ -44,6 +48,19 @@ public class Comment {
     public boolean hasLiked;
     public User author;
     public Ugc ugc;
+
+    @Bindable
+    public User getAuthor() {
+        return author;
+    }
+
+    @Bindable
+    public Ugc getUgc() {
+        if (ugc == null) {
+            ugc = new Ugc();
+        }
+        return ugc;
+    }
 
     @Override
     public boolean equals(@Nullable Object obj) {

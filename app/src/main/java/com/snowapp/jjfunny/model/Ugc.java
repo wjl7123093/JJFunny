@@ -32,6 +32,28 @@ public class Ugc extends BaseObservable implements Serializable {
     public boolean hasdiss;
 
     @Bindable
+    public int getShareCount() {
+        return shareCount;
+    }
+
+    public void setShareCount(int shareCount) {
+        this.shareCount = shareCount;
+        // 属性改变，重新执行数据绑定
+        notifyPropertyChanged(BR._all);
+    }
+
+    @Bindable
+    public boolean isHasFavorite() {
+        return hasFavorite;
+    }
+
+    public void setHasFavorite(boolean hasFavorite) {
+        this.hasFavorite = hasFavorite;
+        // 属性改变，重新执行数据绑定
+        notifyPropertyChanged(BR._all);
+    }
+
+    @Bindable
     public boolean isHasLiked() {
         return hasLiked;
     }
@@ -64,6 +86,8 @@ public class Ugc extends BaseObservable implements Serializable {
             setHasLiked(false); // 👍 和 👎 互斥
         }
         this.hasdiss = hasdiss;
+        // 属性改变，重新执行数据绑定
+        notifyPropertyChanged(BR._all);
     }
 
     @Override

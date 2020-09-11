@@ -57,6 +57,11 @@ public class Feed extends BaseObservable implements Serializable {
         return ugc;
     }
 
+    @Bindable
+    public User getAuthor() {
+        return author;
+    }
+
     @Override
     public boolean equals(@Nullable Object obj) {
         if (obj == null || !(obj instanceof Feed))
