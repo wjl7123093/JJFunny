@@ -3,13 +3,17 @@ package com.snowapp.jjfunny.model;
 import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+
+import java.io.Serializable;
 
 /**
  * @date 2020-08-21
  * @author snow
  * @description 帖子
  */
-public class Feed {
+public class Feed extends BaseObservable implements Serializable {
 
     /**
      * id : 428
@@ -44,6 +48,14 @@ public class Feed {
     public User author;
     public Comment topComment;
     public Ugc ugc;
+
+    @Bindable
+    public Ugc getUgc() {
+        if (ugc == null) {
+            ugc = new Ugc();
+        }
+        return ugc;
+    }
 
     @Override
     public boolean equals(@Nullable Object obj) {
