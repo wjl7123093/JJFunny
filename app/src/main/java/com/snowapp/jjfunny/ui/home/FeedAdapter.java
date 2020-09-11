@@ -78,22 +78,26 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
         }
 
         public void bindData(Feed item) {
-//            mBinding.setVariable(BR.feed, item);
-//            mBinding.setVariable(BR.lifeCycleOwner, mContext);
+            //这里之所以手动绑定数据的原因是 图片 和视频区域都是需要计算的
+            //而dataBinding的执行默认是延迟一帧的。
+            //当列表上下滑动的时候 ，会明显的看到宽高尺寸不对称的问题
+
+            mBinding.setVariable(BR.feed, item);
+            mBinding.setVariable(BR.lifeCycleOwner, mContext);
             if (mBinding instanceof LayoutFeedTypeImageBinding) {
                 // 图片
                 LayoutFeedTypeImageBinding imageBinding = (LayoutFeedTypeImageBinding) mBinding;
-                imageBinding.setFeed(item);
                 feedImage = imageBinding.feedImage;
                 imageBinding.feedImage.bindData(item.width, item.height, 16, item.cover);
-                imageBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
+//                imageBinding.setFeed(item);
+//                imageBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
             } else if (mBinding instanceof  LayoutFeedTypeVideoBinding) {
                 // 视频
                 LayoutFeedTypeVideoBinding videoBinding = (LayoutFeedTypeVideoBinding) mBinding;
-                videoBinding.setFeed(item);
                 listPlayerView = videoBinding.listPlayerView;
                 videoBinding.listPlayerView.bindData(mCategory, item.width, item.height, item.cover, item.url);
-                videoBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
+//                videoBinding.setFeed(item);
+//                videoBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
             }
         }
     }
