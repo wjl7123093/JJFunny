@@ -4,16 +4,20 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ViewDataBinding;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.snowapp.jjfunny.BR;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeImageBinding;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeVideoBinding;
 import com.snowapp.jjfunny.model.Feed;
+import com.snowapp.jjfunny.view.ListPlayerView;
 import com.snowapp.libcommon.enums.ViewType;
 
 public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> {
@@ -64,7 +68,9 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final ViewDataBinding mBinding;
+        public final ViewDataBinding mBinding;
+        public ListPlayerView listPlayerView;
+        public ImageView feedImage;
 
         public ViewHolder(@NonNull View itemView, ViewDataBinding binding) {
             super(itemView);
@@ -72,18 +78,22 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
         }
 
         public void bindData(Feed item) {
+//            mBinding.setVariable(BR.feed, item);
+//            mBinding.setVariable(BR.lifeCycleOwner, mContext);
             if (mBinding instanceof LayoutFeedTypeImageBinding) {
                 // 图片
                 LayoutFeedTypeImageBinding imageBinding = (LayoutFeedTypeImageBinding) mBinding;
                 imageBinding.setFeed(item);
+                feedImage = imageBinding.feedImage;
                 imageBinding.feedImage.bindData(item.width, item.height, 16, item.cover);
-
+                imageBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
             } else if (mBinding instanceof  LayoutFeedTypeVideoBinding) {
                 // 视频
                 LayoutFeedTypeVideoBinding videoBinding = (LayoutFeedTypeVideoBinding) mBinding;
                 videoBinding.setFeed(item);
+                listPlayerView = videoBinding.listPlayerView;
                 videoBinding.listPlayerView.bindData(mCategory, item.width, item.height, item.cover, item.url);
-
+                videoBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
             }
         }
     }

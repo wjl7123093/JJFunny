@@ -7,6 +7,10 @@
             name="feed"
             type="Feed" />
 
+        <variable
+            name="lifeCycleOwner"
+            type="androidx.lifecycle.LifecycleOwner" />
+
         <import type="com.snowapp.jjfunny.model.Feed" />
     </data>
 
@@ -42,7 +46,9 @@
             app:comment="@{feed.topComment}"/>-->
 
         <include
+            android:id="@+id/interaction_binding"
             layout="@layout/layout_feed_interaction"
+            app:lifeCycleOwner="@{lifeCycleOwner}"
             app:feed="@{feed}"/>
 
     </LinearLayout>
