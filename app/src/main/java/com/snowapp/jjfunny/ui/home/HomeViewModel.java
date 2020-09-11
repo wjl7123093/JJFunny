@@ -13,6 +13,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.snowapp.jjfunny.AbsViewModel;
 import com.snowapp.jjfunny.model.Feed;
 import com.snowapp.jjfunny.ui.MutableDataSource;
+import com.snowapp.jjfunny.ui.login.UserManager;
 import com.snowapp.libnetwork.ApiResponse;
 import com.snowapp.libnetwork.ApiService;
 import com.snowapp.libnetwork.JsonCallback;
@@ -72,7 +73,7 @@ public class HomeViewModel extends AbsViewModel<Feed> {
         // /feeds/queryHotFeedsList
         Request request = ApiService.get("/feeds/queryHotFeedsList")
                 .addParam("feedType", null)
-                .addParam("userId", 0)
+                .addParam("userId", UserManager.get().getUserId())
                 .addParam("feedId", key)
                 .addParam("pageCount", 10)
                 .responseType(new TypeReference<ArrayList<Feed>>() {
