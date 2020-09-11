@@ -16,14 +16,15 @@
         <import type="com.snowapp.jjfunny.model.Feed" />
         <import type="com.snowapp.jjfunny.utils.StringConvert" />
         <import type="com.snowapp.jjfunny.ui.home.InteractionPresenter" />
+        <import type="android.content.Context" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
         android:orientation="horizontal"
-        android:paddingLeft="@dimen/dp_16"
-        android:paddingRight="@dimen/dp_16">
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10">
 
         <!-- 点赞 -->
         <com.google.android.material.button.MaterialButton
@@ -94,9 +95,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="分享"
+            android:text="@{feed.ugc.shareCount > 0 ? StringConvert.convertFeedUgc(feed.ugc.shareCount) : null}"
             android:textColor="@color/color_3d3"
             android:textSize="@dimen/sp_14"
+            android:onClick="@{() -> InteractionPresenter.openShare((Context) lifeCycleOwner, feed)}"
             app:backgroundTint="@color/color_white"
             app:cornerRadius="0dp"
             app:icon="@drawable/icon_cell_share"
