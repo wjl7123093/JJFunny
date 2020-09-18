@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+    <!--
+        此处根布局必须是 merge.
+        一旦修改成 FrameLayout，在 ListPlayerView.java 中设置的 index = 1 就会失效。
+        也就是说视频一旦开始播放，其 UI 就会覆盖 cover 和 playbtn按钮。
+        （个人猜测是：FrameLayout 作为 Li LinearLayout 的嵌套层级后， index 属性会失效。
+          导致 addView 的时候，默认添加到顶层 UI，覆盖 xml 文件里设置的其他 UI）
+     -->
 
     <com.snowapp.jjfunny.view.JJImageView
         android:id="@+id/blur_background"
@@ -36,4 +43,4 @@
         android:indeterminateTint="@color/color_theme_10"
         android:visibility="gone"/>
 
-</FrameLayout>
+</merge>
