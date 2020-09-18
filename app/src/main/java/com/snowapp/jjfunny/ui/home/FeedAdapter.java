@@ -100,5 +100,15 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
 //                videoBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
             }
         }
+
+        // 判断是否是 视频 类型
+        public boolean isVideoItem() {
+            return mBinding instanceof LayoutFeedTypeVideoBinding;
+        }
+
+        public ListPlayerView getListPlayerView() {
+            return listPlayerView;
+        }
+
     }
 }
