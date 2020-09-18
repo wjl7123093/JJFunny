@@ -43,6 +43,10 @@ public class JJImageView extends AppCompatImageView {
         super(context, attrs, defStyleAttr);
     }
 
+    public void setImageUrl(String imageUrl) {
+        setImageUrl(this, imageUrl, false);
+    }
+
     /**
      * 设置图片资源（databinding 方法）
      * @date 2020-08-21
