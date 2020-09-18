@@ -29,6 +29,7 @@ public class HomeViewModel extends AbsViewModel<Feed> {
     private volatile boolean withCache = true;
     private MutableLiveData<PagedList<Feed>> cacheLiveData = new MutableLiveData<>();
     private AtomicBoolean loadAfter = new AtomicBoolean(false); // 同步位标记
+    private String mFeedType;
 
     @Override
     public DataSource createDataSource() {
@@ -66,13 +67,18 @@ public class HomeViewModel extends AbsViewModel<Feed> {
         return cacheLiveData;
     }
 
+    public void setFeedType(String feedType) {
+
+        mFeedType = feedType;
+    }
+
     private void loadData(int key, ItemKeyedDataSource.LoadCallback<Feed> callback) {
         if (key > 0) {
             loadAfter.set(true);
         }
         // /feeds/queryHotFeedsList
         Request request = ApiService.get("/feeds/queryHotFeedsList")
-                .addParam("feedType", null)
+                .addParam("feedType", mFeedType)
                 .addParam("userId", UserManager.get().getUserId())
                 .addParam("feedId", key)
                 .addParam("pageCount", 10)

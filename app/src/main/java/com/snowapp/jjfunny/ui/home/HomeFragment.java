@@ -1,10 +1,12 @@
 package com.snowapp.jjfunny.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.paging.ItemKeyedDataSource;
 import androidx.paging.PagedList;
@@ -12,6 +14,7 @@ import androidx.paging.PagedListAdapter;
 
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.snowapp.jjfunny.exoplayer.PageListPlayDetector;
+import com.snowapp.jjfunny.exoplayer.PageListPlayManager;
 import com.snowapp.jjfunny.model.Feed;
 import com.snowapp.jjfunny.ui.AbsListFragment;
 import com.snowapp.jjfunny.ui.MutableDataSource;
@@ -23,6 +26,16 @@ import java.util.List;
 public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
     private static final String TAG = "HomeFragment";
     private PageListPlayDetector playDetector ;
+    private String feedType;
+    private boolean shouldPause = true;
+
+    public static HomeFragment newInstance(String feedType) {
+        Bundle args = new Bundle();
+        args.putString("feedType", feedType);
+        HomeFragment fragment = new HomeFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -30,10 +43,11 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
             @Override
             public void onChanged(PagedList<Feed> feeds) {
                 // feeds 缓存数据
-                adapter.submitList(feeds);
+                submitList(feeds);
             }
         });
         playDetector = new PageListPlayDetector(this, mRecyclerView);
+        mViewModel.setFeedType(feedType);
     }
 
     @Override
@@ -42,7 +56,7 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
 
     @Override
     public PagedListAdapter getAdapter() {
-        String feedType = getArguments() == null ? "all" : getArguments().getString("feedType");
+        feedType = getArguments() == null ? "all" : getArguments().getString("feedType");
         return new FeedAdapter(getContext(), feedType){
             // item 进入屏幕
             @Override
@@ -81,18 +95,57 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
 
     @Override
     public void onRefresh(@NonNull RefreshLayout refreshLayout) {
+        //invalidate 之后Paging会重新创建一个DataSource 重新调用它的loadInitial方法加载初始化数据
+        //详情见：LivePagedListBuilder#compute方法
         mViewModel.getDataSource().invalidate();
     }
 
     @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if (hidden) {
+            playDetector.onPause();
+        } else {
+            playDetector.onResume();
+        }
+    }
+
+    @Override
     public void onPause() {
-        playDetector.onPause();
+        //如果是跳转到详情页,咱们就不需要 暂停视频播放了
+        //如果是前后台切换 或者去别的页面了 都是需要暂停视频播放的
+        if (shouldPause) {
+            playDetector.onPause();
+        }
+        Log.e("homefragment", "onPause: feedtype:" + feedType);
         super.onPause();
     }
 
     @Override
     public void onResume() {
-        playDetector.onResume();
         super.onResume();
+        shouldPause = true;
+        //由于沙发Tab的几个子页面 复用了HomeFragment。
+        //我们需要判断下 当前页面 它是否有ParentFragment.
+        //当且仅当 它和它的ParentFragment均可见的时候，才能恢复视频播放
+        if (getParentFragment() != null) {
+            if (getParentFragment().isVisible() && isVisible()) {
+                Log.e("homefragment", "onResume: feedtype:" + feedType);
+                playDetector.onResume();
+            }
+        } else {
+            if (isVisible()) {
+                Log.e("homefragment", "onResume: feedtype:" + feedType);
+                playDetector.onResume();
+            }
+        }
+    }
+
+
+    @Override
+    public void onDestroy() {
+        //记得销毁
+        PageListPlayManager.release(feedType);
+        super.onDestroy();
     }
 }
