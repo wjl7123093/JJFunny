@@ -6,12 +6,15 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
 import com.snowapp.jjfunny.model.BottomBar;
 import com.snowapp.jjfunny.model.Destination;
+import com.snowapp.jjfunny.model.SofaTab;
 import com.snowapp.libcommon.global.AppGlobals;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 
 /**
@@ -27,6 +30,7 @@ public class AppConfig {
     private static HashMap<String, Destination> sDestConfig;
 
     private static BottomBar sBottomBar;
+    private static SofaTab sSofaTab;
 
     /**
      * 解析 destination.json
@@ -57,6 +61,27 @@ public class AppConfig {
             sBottomBar = JSON.parseObject(content, BottomBar.class);
         }
         return sBottomBar;
+    }
+
+    /**
+     * 解析 sofa_tabs_config.json
+     *
+     * @date 2020-09-18
+     * @author snow
+     * @return SofaTab
+     */
+    public static SofaTab getSofaTabConfig() {
+        if (null == sSofaTab) {
+            String content = parseFile("sofa_tabs_config.json");
+            sSofaTab = JSON.parseObject(content, SofaTab.class);
+            Collections.sort(sSofaTab.tabs, new Comparator<SofaTab.Tabs>() {
+                @Override
+                public int compare(SofaTab.Tabs o1, SofaTab.Tabs o2) {
+                    return o1.index < o2.index ? -1 : 1;
+                }
+            });
+        }
+        return sSofaTab;
     }
 
     /**
