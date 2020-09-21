@@ -371,6 +371,7 @@ public class InteractionPresenter {
     }
 
     private static void showToast(String message) {
+        // 传递到主线程 用 ArchTaskExecutor
         ArchTaskExecutor.getMainThreadExecutor().execute(new Runnable() {
             @Override
             public void run() {
