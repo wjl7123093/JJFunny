@@ -1,6 +1,7 @@
 package com.snowapp.jjfunny.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,13 @@ import com.snowapp.jjfunny.BR;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeImageBinding;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeVideoBinding;
 import com.snowapp.jjfunny.model.Feed;
+import com.snowapp.jjfunny.ui.detail.FeedDetailActivity;
 import com.snowapp.jjfunny.view.ListPlayerView;
 import com.snowapp.libcommon.enums.ViewType;
 
+/**
+ * 帖子列表适配器
+ */
 public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
@@ -64,6 +69,17 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bindData(getItem(position));
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                FeedDetailActivity.startFeedDetailActivity(mContext, getItem(position), mCategory);
+                Intent intent = new Intent(mContext, FeedDetailActivity.class);
+                intent.putExtra("key_feed", getItem(position));
+                intent.putExtra("key_category", mCategory);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
