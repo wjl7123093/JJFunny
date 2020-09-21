@@ -20,6 +20,7 @@ import com.snowapp.jjfunny.model.TagList;
 import com.snowapp.jjfunny.model.User;
 import com.snowapp.jjfunny.ui.ShareDialog;
 import com.snowapp.jjfunny.ui.login.UserManager;
+import com.snowapp.libcommon.extension.LiveDataBus;
 import com.snowapp.libcommon.global.AppGlobals;
 import com.snowapp.libnetwork.ApiResponse;
 import com.snowapp.libnetwork.ApiService;
@@ -81,6 +82,9 @@ public class InteractionPresenter {
                         if (response.body != null) {
                             boolean hasLiked = response.body.getBoolean("hasLiked").booleanValue();
                             feed.getUgc().setHasLiked(hasLiked);
+                            // 通过 LiveDataBus 分发消息
+                            LiveDataBus.get().with(DATA_FROM_INTERACTION)
+                                    .postValue(feed);
                         }
                     }
                 });
@@ -225,8 +229,8 @@ public class InteractionPresenter {
                         if (response.body != null) {
                             boolean hasFavorite = response.body.getBooleanValue("hasFavorite");
                             feed.getUgc().setHasFavorite(hasFavorite);
-//                            LiveDataBus.get().with(DATA_FROM_INTERACTION)
-//                                    .postValue(feed);
+                            LiveDataBus.get().with(DATA_FROM_INTERACTION)
+                                    .postValue(feed);
                         }
                     }
 
@@ -261,8 +265,8 @@ public class InteractionPresenter {
                         if (response.body != null) {
                             boolean hasFollow = response.body.getBooleanValue("hasLiked");
                             feed.getAuthor().setHasFollow(hasFollow);
-//                            LiveDataBus.get().with(DATA_FROM_INTERACTION)
-//                                    .postValue(feed);
+                            LiveDataBus.get().with(DATA_FROM_INTERACTION)
+                                    .postValue(feed);
                         }
                     }
 
