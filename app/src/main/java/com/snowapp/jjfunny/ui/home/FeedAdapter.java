@@ -1,7 +1,6 @@
 package com.snowapp.jjfunny.ui.home;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +21,7 @@ import com.snowapp.jjfunny.model.Feed;
 import com.snowapp.jjfunny.ui.detail.FeedDetailActivity;
 import com.snowapp.jjfunny.view.ListPlayerView;
 import com.snowapp.libcommon.enums.ViewType;
+import com.snowapp.libcommon.extension.LiveDataBus;
 
 /**
  * 帖子列表适配器
@@ -68,18 +69,48 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.bindData(getItem(position));
+        Feed feed = getItem(position);
+
+        holder.bindData(feed);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                FeedDetailActivity.startFeedDetailActivity(mContext, getItem(position), mCategory);
-                Intent intent = new Intent(mContext, FeedDetailActivity.class);
-                intent.putExtra("key_feed", getItem(position));
-                intent.putExtra("key_category", mCategory);
-                mContext.startActivity(intent);
+                FeedDetailActivity.startFeedDetailActivity(mContext, feed, mCategory);
+
+                if (mFeedObserver == null) {
+                    mFeedObserver = new FeedObserver();
+                    // 把 FeedObserver 注册到 LiveDataBus 中
+                    // InteractionPresenter 里面通过 LiveData 发送的数据就能够回调到 FeedObserver 的 onChange 方法里
+                    LiveDataBus.get().with(InteractionPresenter.DATA_FROM_INTERACTION)
+                            .observe((LifecycleOwner) mContext, mFeedObserver);
+                }
+                mFeedObserver.setFeed(feed);
             }
         });
+    }
+
+    private FeedObserver mFeedObserver;
+
+    private class FeedObserver implements Observer<Feed> {
+
+        private Feed mFeed;
+
+        @Override
+        public void onChanged(Feed newOne) {
+            // 老数据id 不等于 新数据id，则不作处理
+            if (mFeed.id != newOne.id)
+                return;
+            // 否则，将新数据覆盖老数据
+            mFeed.author = newOne.author;
+            mFeed.ugc = newOne.ugc;
+            mFeed.notifyChange();
+        }
+
+        public void setFeed(Feed feed) {
+
+            mFeed = feed;
+        }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
