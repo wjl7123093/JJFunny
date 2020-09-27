@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MutableDataSource<Key, Value> extends PageKeyedDataSource<Key, Value> {
+public class MutablePageKeyedDataSource<Key, Value> extends PageKeyedDataSource<Key, Value> {
     public List<Value> data = new ArrayList<>();
 
     public PagedList<Value> buildNewPagedList(PagedList.Config config) {

@@ -6,7 +6,6 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.paging.ItemKeyedDataSource;
 import androidx.paging.PagedList;
@@ -17,7 +16,7 @@ import com.snowapp.jjfunny.exoplayer.PageListPlayDetector;
 import com.snowapp.jjfunny.exoplayer.PageListPlayManager;
 import com.snowapp.jjfunny.model.Feed;
 import com.snowapp.jjfunny.ui.AbsListFragment;
-import com.snowapp.jjfunny.ui.MutableDataSource;
+import com.snowapp.jjfunny.ui.MutablePageKeyedDataSource;
 import com.snowapp.libnavannotation.FragmentDestination;
 
 import java.util.List;
@@ -84,7 +83,7 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
             public void onResult(@NonNull List<Feed> data) {
                 PagedList.Config config = adapter.getCurrentList().getConfig();
                 if (data != null && data.size() > 0) {
-                    MutableDataSource dataSource = new MutableDataSource();
+                    MutablePageKeyedDataSource dataSource = new MutablePageKeyedDataSource();
                     dataSource.data.addAll(data);
                     PagedList pagedList = dataSource.buildNewPagedList(config);
                     submitList(pagedList);

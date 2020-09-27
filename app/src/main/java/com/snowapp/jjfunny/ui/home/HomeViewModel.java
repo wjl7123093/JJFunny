@@ -10,9 +10,9 @@ import androidx.paging.ItemKeyedDataSource;
 import androidx.paging.PagedList;
 
 import com.alibaba.fastjson.TypeReference;
-import com.snowapp.jjfunny.AbsViewModel;
+import com.snowapp.jjfunny.ui.AbsViewModel;
 import com.snowapp.jjfunny.model.Feed;
-import com.snowapp.jjfunny.ui.MutableDataSource;
+import com.snowapp.jjfunny.ui.MutablePageKeyedDataSource;
 import com.snowapp.jjfunny.ui.login.UserManager;
 import com.snowapp.libnetwork.ApiResponse;
 import com.snowapp.libnetwork.ApiService;
@@ -92,7 +92,7 @@ public class HomeViewModel extends AbsViewModel<Feed> {
                 public void onCacheSuccess(ApiResponse<List<Feed>> response) {
                     Log.e("loadData", "onCacheSuccess: " + response.body.size());
 
-                    MutableDataSource dataSource = new MutableDataSource<Integer, Feed>();
+                    MutablePageKeyedDataSource dataSource = new MutablePageKeyedDataSource<Integer, Feed>();
                     dataSource.data.addAll(response.body);
 
                     PagedList pagedList = dataSource.buildNewPagedList(config);
