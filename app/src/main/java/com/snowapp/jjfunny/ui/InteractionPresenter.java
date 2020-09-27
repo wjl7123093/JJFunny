@@ -1,4 +1,4 @@
-package com.snowapp.jjfunny.ui.home;
+package com.snowapp.jjfunny.ui;
 
 import android.content.Context;
 import android.text.TextUtils;

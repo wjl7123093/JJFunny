@@ -15,7 +15,7 @@
 
         <import type="com.snowapp.jjfunny.model.Feed" />
         <import type="com.snowapp.jjfunny.utils.StringConvert" />
-        <import type="com.snowapp.jjfunny.ui.home.InteractionPresenter" />
+        <import type="com.snowapp.jjfunny.ui.InteractionPresenter" />
         <import type="android.content.Context" />
     </data>
 

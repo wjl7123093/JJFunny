@@ -17,7 +17,7 @@
 
         <import type="com.snowapp.jjfunny.utils.TimeUtils"></import>
 
-        <import type="com.snowapp.jjfunny.ui.home.InteractionPresenter"></import>
+        <import type="com.snowapp.jjfunny.ui.InteractionPresenter"></import>
 
         <variable
             name="owner"

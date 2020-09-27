@@ -1,4 +1,4 @@
-package com.snowapp.jjfunny;
+package com.snowapp.jjfunny.ui;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;

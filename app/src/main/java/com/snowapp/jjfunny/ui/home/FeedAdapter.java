@@ -18,6 +18,7 @@ import com.snowapp.jjfunny.BR;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeImageBinding;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeVideoBinding;
 import com.snowapp.jjfunny.model.Feed;
+import com.snowapp.jjfunny.ui.InteractionPresenter;
 import com.snowapp.jjfunny.ui.detail.FeedDetailActivity;
 import com.snowapp.jjfunny.view.ListPlayerView;
 import com.snowapp.libcommon.enums.ViewType;

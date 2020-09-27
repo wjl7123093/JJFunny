@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.paging.ItemKeyedDataSource;
 
 import com.alibaba.fastjson.TypeReference;
-import com.snowapp.jjfunny.AbsViewModel;
+import com.snowapp.jjfunny.ui.AbsViewModel;
 import com.snowapp.jjfunny.model.Comment;
 import com.snowapp.jjfunny.ui.login.UserManager;
 import com.snowapp.libnetwork.ApiResponse;
