@@ -5,10 +5,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.CallSuper;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.paging.ItemKeyedDataSource;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +19,7 @@ import com.snowapp.jjfunny.R;
 import com.snowapp.jjfunny.databinding.LayoutFeedDetailBottomInateractionBinding;
 import com.snowapp.jjfunny.model.Comment;
 import com.snowapp.jjfunny.model.Feed;
+import com.snowapp.jjfunny.ui.MutableItemKeyedDataSource;
 import com.snowapp.libcommon.utils.PixUtils;
 import com.snowapp.libcommon.view.EmptyView;
 
@@ -30,6 +33,7 @@ public abstract class ViewHandler {
     protected RecyclerView mRecyclerView;
     protected LayoutFeedDetailBottomInateractionBinding mInateractionBinding;
     protected FeedCommentAdapter listAdapter;
+    private CommentDialog commentDialog;
 
     public ViewHandler(FragmentActivity activity) {
 
@@ -65,6 +69,38 @@ public abstract class ViewHandler {
                 handleEmpty(comments.size() > 0);
             }
         });
+        // 输入评论内容
+        mInateractionBinding.inputView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 弹出输入评论内容对话框
+                showCommentDialog();
+            }
+        });
+    }
+
+    // 弹出评论对话框
+    private void showCommentDialog() {
+        if (commentDialog == null) {
+            commentDialog = CommentDialog.newInstance(mFeed.itemId);
+        }
+        // 新增一条评论
+        commentDialog.setCommentAddListener(comment -> {
+            MutableItemKeyedDataSource<Integer, Comment> dataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) viewModel.getDataSource()) {
+                @NonNull
+                @Override
+                public Integer getKey(@NonNull Comment item) {
+                    return item.id;
+                }
+            };
+            dataSource.data.add(comment);
+            dataSource.data.addAll(listAdapter.getCurrentList());
+            PagedList<Comment> pagedList = dataSource.buildNewPagedList(listAdapter.getCurrentList().getConfig());
+            // submitList 提交新的 pagedList 不会造成界面卡顿
+            // 因为 Paging 框架会使用 差分异算法 在指定位置上进行插入/更新/删除。其余位置不会变。
+            listAdapter.submitList(pagedList);
+        });
+        commentDialog.show(mActivity.getSupportFragmentManager(), "comment_dialog");
     }
 
     private EmptyView mEmptyView;

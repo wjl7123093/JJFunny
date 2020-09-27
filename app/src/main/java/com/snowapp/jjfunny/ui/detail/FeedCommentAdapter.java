@@ -1,6 +1,5 @@
 package com.snowapp.jjfunny.ui.detail;
 
-import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -9,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 import androidx.paging.ItemKeyedDataSource;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.DiffUtil;
@@ -16,7 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.snowapp.jjfunny.databinding.LayoutFeedCommentListItemBinding;
 import com.snowapp.jjfunny.model.Comment;
-import com.snowapp.jjfunny.ui.home.InteractionPresenter;
+import com.snowapp.jjfunny.ui.InteractionPresenter;
+import com.snowapp.jjfunny.ui.MutableItemKeyedDataSource;
 import com.snowapp.jjfunny.ui.login.UserManager;
 import com.snowapp.libcommon.extension.AbsPagedListAdapter;
 import com.snowapp.libcommon.utils.PixUtils;
@@ -55,6 +56,37 @@ public class FeedCommentAdapter extends AbsPagedListAdapter<Comment, FeedComment
     protected void onBindViewHolder2(ViewHolder holder, int position) {
         Comment item = getItem(position);
         holder.bindData(item);
+        // 删除评论
+        holder.mBinding.commentDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InteractionPresenter.deleteFeedComment(mContext, item.itemId, item.commentId)
+                        .observe((LifecycleOwner) mContext, new Observer<Boolean>() {
+                            @Override
+                            public void onChanged(Boolean success) {
+                                if (success) {
+                                    MutableItemKeyedDataSource<Integer, Comment> dataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) getCurrentList().getDataSource()) {
+                                        @NonNull
+                                        @Override
+                                        public Integer getKey(@NonNull Comment item) {
+                                            return item.id;
+                                        }
+                                    };
+                                    PagedList<Comment> currentList = getCurrentList();
+                                    // 过滤（把要删除的评论 过滤掉，再重新绑定 => 实现删除效果）
+                                    for (Comment comment : currentList) {
+                                        if (comment != getItem(position)) {
+                                            dataSource.data.add(comment);
+                                        }
+                                    }
+                                    // 提交新的数据集
+                                    PagedList<Comment> pagedList = dataSource.buildNewPagedList(getCurrentList().getConfig());
+                                    submitList(pagedList);
+                                }
+                            }
+                        });
+            }
+        });
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
