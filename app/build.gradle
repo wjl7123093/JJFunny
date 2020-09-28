@@ -19,8 +19,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility this.rootProject.depsVersion.jdk
-        targetCompatibility this.rootProject.depsVersion.jdk
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     dataBinding {
@@ -30,7 +30,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
 
     implementation project(":libnavannotation")
     annotationProcessor project(":libnavcompiler")
