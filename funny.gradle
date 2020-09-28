@@ -12,7 +12,7 @@ ext {
     depsVersion = [
             jdk                 : '1.8',
             appcompatx          : '1.1.0',
-            okhttp3             : '4.2.0',
+            okhttp3             : '3.11.0', // 修改了版本号，与其他库引用okhttp3的版本号保持一致，避免冲突
             okhttp3_logging     : '3.5.0',
             room                : '1.1.1',
             fastjson            : '1.2.59',
