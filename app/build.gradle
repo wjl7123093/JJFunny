@@ -2,6 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion this.rootProject.android.compileSdkVersion
+    buildToolsVersion this.rootProject.android.buildToolsVersion
+    // 添加 buildToolsVersion 声明，避免 lambda 报以下错。
+    // 如果 application 中不声明 buildToolsVersion，则会报以下错误（有时候才出现）：
+//    错误: 找不到符号
+//    符号:   方法 metafactory(Lookup,String,MethodType,MethodType,MethodHandle,MethodType)
+//    位置: 接口 LambdaMetafactory
 
     defaultConfig {
         applicationId this.rootProject.android.applicationId
