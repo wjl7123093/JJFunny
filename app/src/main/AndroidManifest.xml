@@ -34,7 +34,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.publish.CaptureActivity" ></activity>
+        <activity
+            android:name=".ui.publish.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/capture"></activity>
+
+        <activity
+            android:name=".ui.publish.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/preview"></activity>
 
         <activity android:name=".ui.login.LoginActivity" ></activity>
 
