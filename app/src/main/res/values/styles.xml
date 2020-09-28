@@ -37,4 +37,15 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <!-- 照片/视频拍摄页面 主题 -->
+    <style name="capture" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+    <!-- 照片/视频预览页面 主题 -->
+    <style name="preview" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>
