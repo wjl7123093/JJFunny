@@ -1,0 +1,67 @@
+// gradle 版本管理
+ext {
+    android = [
+            applicationId    : 'com.snowapp.jjfunny',
+            compileSdkVersion: 29,
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : '1.0',
+            multiDexEnabled  : true
+    ]
+    depsVersion = [
+            jdk                 : '1.8',
+            appcompatx          : '1.1.0',
+            okhttp3             : '4.2.0',
+            okhttp3_logging     : '3.5.0',
+            room                : '1.1.1',
+            fastjson            : '1.2.59',
+            material            : '1.1.0-alpha10',
+            constraintlayout    : '1.1.3',
+            navigation          : '2.1.0',
+            lifecycle           : '2.1.0',
+            paging              : '2.1.0',
+            glide               : '4.9.0',
+            glide_tansformations: '4.0.0',
+            camera_core         : '1.0.0-alpha04',
+            camera_view         : '1.0.0-alpha01',
+            photoview           : '2.3.0@aar',
+            smartrefreshlayout  : '1.1.0',
+            viewpager2          : '1.0.0-beta04',
+            exoplayer           : '2.10.4',
+            bugly               : 'latest.release'
+    ]
+    depsLibs = [
+            appcompatx             : "androidx.appcompat:appcompat:${depsVersion.appcompatx}",
+            okhttp3                : "com.squareup.okhttp3:okhttp:${depsVersion.okhttp3}",
+            okhttp3_logging        : "com.squareup.okhttp3:logging-interceptor:${depsVersion.okhttp3_logging}",
+            room                   : "android.arch.persistence.room:runtime:${depsVersion.room}",
+            room_lifecycle         : "android.arch.lifecycle:extensions:${depsVersion.room}",
+            room_compiler          : "android.arch.persistence.room:compiler:${depsVersion.room}",
+            room_lifecycle_compiler: "android.arch.lifecycle:compiler:${depsVersion.room}",
+            fastjson               : "com.alibaba:fastjson:${depsVersion.fastjson}",
+            material               : "com.google.android.material:material:${depsVersion.material}",
+            constraintlayout       : "androidx.constraintlayout:constraintlayout:${depsVersion.constraintlayout}",
+            navigation_fragment    : "androidx.navigation:navigation-fragment:${depsVersion.navigation}",
+            navigation_ui          : "androidx.navigation:navigation-ui:${depsVersion.navigation}",
+            lifecycle              : "androidx.lifecycle:lifecycle-extensions:${depsVersion.lifecycle}",
+            lifecycle_compiler     : "androidx.lifecycle:lifecycle-compiler:${depsVersion.lifecycle}",
+            paging                 : "androidx.paging:paging-runtime:${depsVersion.paging}",
+            glide                  : "com.github.bumptech.glide:glide:${depsVersion.glide}",
+            glide_compiler         : "com.github.bumptech.glide:compiler:${depsVersion.glide}",
+            glide_tansformations   : "jp.wasabeef:glide-transformations:${depsVersion.glide_tansformations}",
+            camera_core            : "androidx.camera:camera-core:${depsVersion.camera_core}",
+            camera_camera2         : "androidx.camera:camera-camera2:${depsVersion.camera_core}",
+            camera_view            : "androidx.camera:camera-view:${depsVersion.camera_view}",
+            camera_extensions      : "androidx.camera:camera-extensions:${depsVersion.camera_view}",
+            photoview              : "com.github.chrisbanes:PhotoView:${depsVersion.photoview}",
+            smartrefreshlayout     : "com.scwang.smartrefresh:SmartRefreshLayout:${depsVersion.smartrefreshlayout}",
+            smartrefreshheader     : "com.scwang.smartrefresh:SmartRefreshHeader:${depsVersion.smartrefreshlayout}",
+            viewpager2             : "androidx.viewpager2:viewpager2:${depsVersion.viewpager2}",
+            exoplayer_core         : "com.google.android.exoplayer:exoplayer-core:${depsVersion.exoplayer}",
+            exoplayer_dash         : "com.google.android.exoplayer:exoplayer-dash:${depsVersion.exoplayer}",
+            exoplayer_ui           : "com.google.android.exoplayer:exoplayer-ui:${depsVersion.exoplayer}",
+            bugly                  : "com.tencent.bugly:crashreport:${depsVersion.bugly}",
+            bugly_native           : "com.tencent.bugly:nativecrashreport:${depsVersion.bugly}"
+    ]
+}
