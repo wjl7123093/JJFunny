@@ -1,4 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: this.rootProject.file('funny.gradle')
+// 在根gradle中引入自定义 gradle 配置文件，方便子 gradle 引用其相关配置
 
 buildscript {
     repositories {
@@ -18,6 +20,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
         
     }
 }
