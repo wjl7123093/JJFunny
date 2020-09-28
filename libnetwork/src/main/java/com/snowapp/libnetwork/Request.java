@@ -10,7 +10,7 @@ import androidx.arch.core.executor.ArchTaskExecutor;
 
 import com.snowapp.libnetwork.cache.CacheManager;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -160,14 +160,14 @@ public abstract class Request<T, R extends Request> implements Cloneable{
         if (mCacheStrategy != CACHE_ONLY) { // 并非只读取缓存，则异步网络请求
             getCall().enqueue(new Callback() {
                 @Override
-                public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                public void onFailure(Call call, IOException e) {
                     ApiResponse<T> response = new ApiResponse<>();
                     response.message = e.getMessage();
                     callback.onError(response);
                 }
 
                 @Override
-                public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                public void onResponse(Call call, Response response) throws IOException {
                     ApiResponse<T> apiResponse = parseResponse(response, callback);
                     if (!apiResponse.success) {
                         callback.onError(apiResponse);
