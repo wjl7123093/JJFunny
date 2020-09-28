@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 视频录制View 属性 -->
+    <declare-styleable name="RecordView">
+        <!-- 进度条颜色 -->
+        <attr name="progress_color" format="color"></attr>
+        <!-- 进度条宽度（半径） -->
+        <attr name="progress_width" format="dimension"></attr>
+        <!-- 录制按钮背景色 -->
+        <attr name="fill_color" format="color"></attr>
+        <!-- 录制按钮圆角角度 -->
+        <attr name="radius" format="dimension"></attr>
+        <!-- 录制最大时长 -->
+        <attr name="duration" format="integer"></attr>
+    </declare-styleable>
+</resources>
