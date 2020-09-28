@@ -1,5 +1,6 @@
 package com.snowapp.jjfunny.ui.detail;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ import com.snowapp.jjfunny.model.Comment;
 import com.snowapp.jjfunny.ui.InteractionPresenter;
 import com.snowapp.jjfunny.ui.MutableItemKeyedDataSource;
 import com.snowapp.jjfunny.ui.login.UserManager;
+import com.snowapp.jjfunny.ui.publish.PreviewActivity;
 import com.snowapp.libcommon.extension.AbsPagedListAdapter;
 import com.snowapp.libcommon.utils.PixUtils;
 
@@ -65,28 +67,56 @@ public class FeedCommentAdapter extends AbsPagedListAdapter<Comment, FeedComment
                             @Override
                             public void onChanged(Boolean success) {
                                 if (success) {
-                                    MutableItemKeyedDataSource<Integer, Comment> dataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) getCurrentList().getDataSource()) {
-                                        @NonNull
-                                        @Override
-                                        public Integer getKey(@NonNull Comment item) {
-                                            return item.id;
-                                        }
-                                    };
-                                    PagedList<Comment> currentList = getCurrentList();
-                                    // 过滤（把要删除的评论 过滤掉，再重新绑定 => 实现删除效果）
-                                    for (Comment comment : currentList) {
-                                        if (comment != getItem(position)) {
-                                            dataSource.data.add(comment);
-                                        }
-                                    }
-                                    // 提交新的数据集
-                                    PagedList<Comment> pagedList = dataSource.buildNewPagedList(getCurrentList().getConfig());
-                                    submitList(pagedList);
+                                    deleteAndRefreshList(item);
                                 }
                             }
                         });
             }
         });
+        // 单击评论封面，查看照片/视频
+        holder.mBinding.commentCover.setOnClickListener(view -> {
+            boolean isVideo = item.commentType == Comment.COMMENT_TYPE_VIDEO;
+            PreviewActivity.startActivityForResult((Activity) mContext, isVideo ? item.videoUrl : item.imageUrl, isVideo, null);
+        });
+    }
+
+    // 删除评论并刷新
+    public void deleteAndRefreshList(Comment item) {
+        MutableItemKeyedDataSource<Integer, Comment> dataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) getCurrentList().getDataSource()) {
+            @NonNull
+            @Override
+            public Integer getKey(@NonNull Comment item) {
+                return item.id;
+            }
+        };
+        PagedList<Comment> currentList = getCurrentList();
+        // 过滤（把要删除的评论 过滤掉，再重新绑定 => 实现删除效果）
+        for (Comment comment : currentList) {
+            if (comment != item) {
+                dataSource.data.add(comment);
+            }
+        }
+        // 提交新的数据集
+        PagedList<Comment> pagedList = dataSource.buildNewPagedList(getCurrentList().getConfig());
+        submitList(pagedList);
+    }
+
+    // 新增评论并刷新
+    public void addAndRefreshList(Comment comment) {
+        PagedList<Comment> currentList = getCurrentList();
+        MutableItemKeyedDataSource<Integer, Comment> mutableItemKeyedDataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) currentList.getDataSource()) {
+            @NonNull
+            @Override
+            public Integer getKey(@NonNull Comment item) {
+                return item.id;
+            }
+        };
+        mutableItemKeyedDataSource.data.add(comment);
+        mutableItemKeyedDataSource.data.addAll(currentList);
+        // submitList 提交新的 pagedList 不会造成界面卡顿
+        // 因为 Paging 框架会使用 差分异算法 在指定位置上进行插入/更新/删除。其余位置不会变。
+        PagedList<Comment> pagedList = mutableItemKeyedDataSource.buildNewPagedList(currentList.getConfig());
+        submitList(pagedList);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

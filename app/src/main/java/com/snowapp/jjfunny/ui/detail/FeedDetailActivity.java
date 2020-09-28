@@ -17,7 +17,9 @@ import com.snowapp.libcommon.enums.ViewType;
 public class FeedDetailActivity extends AppCompatActivity {
 
     private static final String KEY_FEED = "key_feed";
-    private static final String KEY_CATEGORY = "key_category";
+    public static final String KEY_CATEGORY = "key_category";
+
+    private ViewHandler viewHandler = null;
 
     public static void startFeedDetailActivity(Context context, Feed item, String category) {
         Intent intent = new Intent(context, FeedDetailActivity.class);
@@ -36,7 +38,6 @@ public class FeedDetailActivity extends AppCompatActivity {
             return;
         }
 
-        ViewHandler viewHandler = null;
         if (feed.itemType == ViewType.TYPE_IMAGE.type) {
             viewHandler = new ImageViewHandler(this);
         } else {
@@ -44,5 +45,39 @@ public class FeedDetailActivity extends AppCompatActivity {
         }
 
         viewHandler.bindInitData(feed);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // 发表评论对话框启动视频拍摄页面的回调，最先会触发 FeedDetailActivity.onActivityResult()
+        // 所以在这里通过 viewHandler 透传给 CommentDialog.onActivityResult()
+        if (viewHandler != null) {
+            viewHandler.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (viewHandler != null) {
+            viewHandler.onPause();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (viewHandler != null) {
+            viewHandler.onResume();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (viewHandler != null) {
+            viewHandler.onBackPressed();
+        }
+        super.onBackPressed();
     }
 }

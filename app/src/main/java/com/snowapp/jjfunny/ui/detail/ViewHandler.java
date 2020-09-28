@@ -86,19 +86,8 @@ public abstract class ViewHandler {
         }
         // 新增一条评论
         commentDialog.setCommentAddListener(comment -> {
-            MutableItemKeyedDataSource<Integer, Comment> dataSource = new MutableItemKeyedDataSource<Integer, Comment>((ItemKeyedDataSource) viewModel.getDataSource()) {
-                @NonNull
-                @Override
-                public Integer getKey(@NonNull Comment item) {
-                    return item.id;
-                }
-            };
-            dataSource.data.add(comment);
-            dataSource.data.addAll(listAdapter.getCurrentList());
-            PagedList<Comment> pagedList = dataSource.buildNewPagedList(listAdapter.getCurrentList().getConfig());
-            // submitList 提交新的 pagedList 不会造成界面卡顿
-            // 因为 Paging 框架会使用 差分异算法 在指定位置上进行插入/更新/删除。其余位置不会变。
-            listAdapter.submitList(pagedList);
+            handleEmpty(true);
+            listAdapter.addAndRefreshList(comment);
         });
         commentDialog.show(mActivity.getSupportFragmentManager(), "comment_dialog");
     }
@@ -120,6 +109,12 @@ public abstract class ViewHandler {
                 mEmptyView.setTitle(mActivity.getString(R.string.feed_comment_empty));
             }
             listAdapter.addHeaderView(mEmptyView);
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (commentDialog != null && commentDialog.isAdded()) {
+            commentDialog.onActivityResult(requestCode, resultCode, data);
         }
     }
 
