@@ -78,7 +78,7 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
             @Override
             public void onClick(View v) {
                 FeedDetailActivity.startFeedDetailActivity(mContext, feed, mCategory);
-
+                onStartFeedDetailActivity(feed);
                 if (mFeedObserver == null) {
                     mFeedObserver = new FeedObserver();
                     // 把 FeedObserver 注册到 LiveDataBus 中
@@ -89,6 +89,10 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
                 mFeedObserver.setFeed(feed);
             }
         });
+    }
+
+    public void onStartFeedDetailActivity(Feed feed) {
+
     }
 
     private FeedObserver mFeedObserver;

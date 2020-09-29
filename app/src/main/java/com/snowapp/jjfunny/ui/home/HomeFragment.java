@@ -17,6 +17,7 @@ import com.snowapp.jjfunny.exoplayer.PageListPlayManager;
 import com.snowapp.jjfunny.model.Feed;
 import com.snowapp.jjfunny.ui.AbsListFragment;
 import com.snowapp.jjfunny.ui.MutablePageKeyedDataSource;
+import com.snowapp.libcommon.enums.ViewType;
 import com.snowapp.libnavannotation.FragmentDestination;
 
 import java.util.List;
@@ -71,6 +72,12 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
             public void onViewDetachedFromWindow(@NonNull ViewHolder holder) {
                 super.onViewDetachedFromWindow(holder);
                 playDetector.removeTarget(holder.getListPlayerView());
+            }
+
+            @Override
+            public void onStartFeedDetailActivity(Feed feed) {
+                boolean isVideo = feed.itemType == ViewType.TYPE_VIDEO.type;
+                shouldPause = !isVideo;
             }
         };
     }
