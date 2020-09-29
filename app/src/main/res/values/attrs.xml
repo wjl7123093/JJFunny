@@ -14,4 +14,28 @@
         <!-- 录制最大时长 -->
         <attr name="duration" format="integer"></attr>
     </declare-styleable>
+
+
+    <declare-styleable name="view_offset_behavior">
+        <attr name="anchor_gravity" format="enum">
+            <enum name="left" value="0"></enum>
+            <enum name="top" value="1"></enum>
+            <enum name="right" value="2"></enum>
+            <enum name="bottom" value="3"></enum>
+        </attr>
+        <attr name="scroll_follow" format="boolean" />
+        <attr name="anchor_id" format="integer" />
+    </declare-styleable>
+
+    <!-- ViewAnchorBehavior 属性值 -->
+    <declare-styleable name="view_anchor_behavior">
+        <attr name="anchorId" format="integer"></attr>
+    </declare-styleable>
+
+    <!-- ViewZoomBehavior 属性值 -->
+    <declare-styleable name="view_zoom_behavior">
+        <attr name="min_height" format="dimension"></attr>
+        <attr name="scrolling_id" format="integer"></attr>
+    </declare-styleable>
+
 </resources>
