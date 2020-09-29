@@ -111,7 +111,7 @@ public class ListPlayerView extends FrameLayout implements IPlayTarget, PlayerCo
      * @date 2020-08-21
      * @author snow
      */
-    private void setSize(int widthPx, int heightPx) {
+    protected void setSize(int widthPx, int heightPx) {
         //这里主要是做视频宽大与高,或者高大于宽时  视频的等比缩放
         int maxWidth = PixUtils.getScreenWidth();
         // 定义最大高度 == 屏幕宽度
