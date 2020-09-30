@@ -30,7 +30,7 @@ public class AppConfig {
     private static HashMap<String, Destination> sDestConfig;
 
     private static BottomBar sBottomBar;
-    private static SofaTab sSofaTab;
+    private static SofaTab sSofaTab, sFindTabConfig;
 
     /**
      * 解析 destination.json
@@ -82,6 +82,27 @@ public class AppConfig {
             });
         }
         return sSofaTab;
+    }
+
+    /**
+     * 解析 find_tabs_config.json
+     *
+     * @date 2020-09-30
+     * @author snow
+     * @return SofaTab
+     */
+    public static SofaTab getFindTabConfig() {
+        if (sFindTabConfig == null) {
+            String content = parseFile("find_tabs_config.json");
+            sFindTabConfig = JSON.parseObject(content, SofaTab.class);
+            Collections.sort(sFindTabConfig.tabs, new Comparator<SofaTab.Tabs>() {
+                @Override
+                public int compare(SofaTab.Tabs o1, SofaTab.Tabs o2) {
+                    return o1.index < o2.index ? -1 : 1;
+                }
+            });
+        }
+        return sFindTabConfig;
     }
 
     /**
