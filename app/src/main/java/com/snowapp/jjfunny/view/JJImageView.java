@@ -56,16 +56,23 @@ public class JJImageView extends AppCompatImageView {
      */
     @BindingAdapter(value = {"image_url", "isCircle"}, requireAll = true)
     public static void setImageUrl(JJImageView view, String imageUrl, boolean isCircle) {
+        view.setImageUrl(view, imageUrl, isCircle, 0);
+    }
+
+    @BindingAdapter(value = {"image_url", "isCircle", "radius"}, requireAll = false)
+    public static void setImageUrl(JJImageView view, String imageUrl, boolean isCircle, int radius) {
         RequestBuilder<Drawable> builder = Glide.with(view).load(imageUrl);
         if (isCircle) {
             // 转换成圆形
             builder.transform(new CircleCrop());
+        } else if (radius > 0) {
+            // 转换成圆角
+            builder.transform(new RoundedCornersTransformation(PixUtils.dp2px(radius), 0));
         }
-
-        ViewGroup.LayoutParams params = view.getLayoutParams();
-        if (null != params && params.width > 0 && params.height > 0) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (layoutParams != null && layoutParams.width > 0 && layoutParams.height > 0) {
             // 重写尺寸，避免资源浪费
-            builder.override(params.width, params.height);
+            builder.override(layoutParams.width, layoutParams.height);
         }
         builder.into(view);
     }
