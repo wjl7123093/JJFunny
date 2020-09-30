@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -156,6 +157,19 @@ public class JJImageView extends AppCompatImageView {
                     @Override
                     public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
                         setBackground(resource);
+                    }
+                });
+    }
+
+    @BindingAdapter(value = {"blur_url", "radius"})
+    public static void setBlurImageUrl(ImageView imageView, String blurUrl, int radius) {
+        Glide.with(imageView).load(blurUrl).override(radius)
+                .transform(new BlurTransformation())
+                .dontAnimate()
+                .into(new SimpleTarget<Drawable>() {
+                    @Override
+                    public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
+                        imageView.setBackground(resource);
                     }
                 });
     }
