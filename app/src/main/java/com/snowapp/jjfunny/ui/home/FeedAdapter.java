@@ -7,14 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.snowapp.jjfunny.BR;
+import com.snowapp.jjfunny.R;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeImageBinding;
 import com.snowapp.jjfunny.databinding.LayoutFeedTypeVideoBinding;
 import com.snowapp.jjfunny.model.Feed;
@@ -22,18 +23,15 @@ import com.snowapp.jjfunny.ui.InteractionPresenter;
 import com.snowapp.jjfunny.ui.detail.FeedDetailActivity;
 import com.snowapp.jjfunny.view.ListPlayerView;
 import com.snowapp.libcommon.enums.ViewType;
+import com.snowapp.libcommon.extension.AbsPagedListAdapter;
 import com.snowapp.libcommon.extension.LiveDataBus;
 
-/**
- * 帖子列表适配器
- */
-public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> {
-
+public class FeedAdapter extends AbsPagedListAdapter<Feed, FeedAdapter.ViewHolder> {
     private final LayoutInflater inflater;
-    private String mCategory;
-    private Context mContext;
+    protected Context mContext;
+    protected String mCategory;
 
-    protected FeedAdapter(Context context, String category) {
+    public FeedAdapter(Context context, String category) {
         super(new DiffUtil.ItemCallback<Feed>() {
             @Override
             public boolean areItemsTheSame(@NonNull Feed oldItem, @NonNull Feed newItem) {
@@ -45,32 +43,33 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
                 return oldItem.equals(newItem);
             }
         });
-        this.mContext = context;
-        this.mCategory = category;
+
         inflater = LayoutInflater.from(context);
+        mContext = context;
+        mCategory = category;
     }
 
     @Override
-    public int getItemViewType(int position) {
+    public int getItemViewType2(int position) {
         Feed feed = getItem(position);
-        return feed.itemType;
+        if (feed.itemType == ViewType.TYPE_IMAGE.type) {
+            return R.layout.layout_feed_type_image;
+        } else if (feed.itemType == ViewType.TYPE_VIDEO.type) {
+            return R.layout.layout_feed_type_video;
+        }
+        return 0;
     }
 
-    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ViewDataBinding binding = null;
-        if (viewType == ViewType.TYPE_IMAGE.type) {
-            binding = LayoutFeedTypeImageBinding.inflate(inflater);
-        } else {
-            binding = LayoutFeedTypeVideoBinding.inflate(inflater);
-        }
+    protected ViewHolder onCreateViewHolder2(ViewGroup parent, int viewType) {
+        ViewDataBinding binding = DataBindingUtil.inflate(inflater, viewType, parent, false);
         return new ViewHolder(binding.getRoot(), binding);
     }
 
+
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Feed feed = getItem(position);
+    protected void onBindViewHolder2(ViewHolder holder, int position) {
+        final Feed feed = getItem(position);
 
         holder.bindData(feed);
 
@@ -83,7 +82,8 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
                     mFeedObserver = new FeedObserver();
                     // 把 FeedObserver 注册到 LiveDataBus 中
                     // InteractionPresenter 里面通过 LiveData 发送的数据就能够回调到 FeedObserver 的 onChange 方法里
-                    LiveDataBus.get().with(InteractionPresenter.DATA_FROM_INTERACTION)
+                    LiveDataBus.get()
+                            .with(InteractionPresenter.DATA_FROM_INTERACTION)
                             .observe((LifecycleOwner) mContext, mFeedObserver);
                 }
                 mFeedObserver.setFeed(feed);
@@ -120,13 +120,13 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public final ViewDataBinding mBinding;
+        public ViewDataBinding mBinding;
         public ListPlayerView listPlayerView;
         public ImageView feedImage;
 
         public ViewHolder(@NonNull View itemView, ViewDataBinding binding) {
             super(itemView);
-            this.mBinding = binding;
+            mBinding = binding;
         }
 
         public void bindData(Feed item) {
@@ -137,23 +137,20 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
             mBinding.setVariable(BR.feed, item);
             mBinding.setVariable(BR.lifeCycleOwner, mContext);
             if (mBinding instanceof LayoutFeedTypeImageBinding) {
-                // 图片
                 LayoutFeedTypeImageBinding imageBinding = (LayoutFeedTypeImageBinding) mBinding;
                 feedImage = imageBinding.feedImage;
                 imageBinding.feedImage.bindData(item.width, item.height, 16, item.cover);
-//                imageBinding.setFeed(item);
-//                imageBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
-            } else if (mBinding instanceof  LayoutFeedTypeVideoBinding) {
-                // 视频
+                //imageBinding.setFeed(item);
+                //imageBinding.interactionBinding.setLifeCycleOwner((LifecycleOwner) mContext);
+            } else if (mBinding instanceof LayoutFeedTypeVideoBinding) {
                 LayoutFeedTypeVideoBinding videoBinding = (LayoutFeedTypeVideoBinding) mBinding;
-                listPlayerView = videoBinding.listPlayerView;
                 videoBinding.listPlayerView.bindData(mCategory, item.width, item.height, item.cover, item.url);
-//                videoBinding.setFeed(item);
-//                videoBinding.interactionBinding.setLifecycleOwner((LifecycleOwner) mContext);
+                listPlayerView = videoBinding.listPlayerView;
+                //videoBinding.setFeed(item);
+                //videoBinding.interactionBinding.setLifeCycleOwner((LifecycleOwner) mContext);
             }
         }
 
-        // 判断是否是 视频 类型
         public boolean isVideoItem() {
             return mBinding instanceof LayoutFeedTypeVideoBinding;
         }
@@ -161,6 +158,5 @@ public class FeedAdapter extends PagedListAdapter<Feed, FeedAdapter.ViewHolder> 
         public ListPlayerView getListPlayerView() {
             return listPlayerView;
         }
-
     }
 }
