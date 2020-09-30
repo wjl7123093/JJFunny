@@ -1,40 +1,45 @@
 package com.snowapp.jjfunny.ui.find;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.text.TextUtils;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.snowapp.jjfunny.R;
+import com.snowapp.jjfunny.model.SofaTab;
+import com.snowapp.jjfunny.ui.find.TagListFragment;
+import com.snowapp.jjfunny.ui.sofa.SofaFragment;
+import com.snowapp.jjfunny.utils.AppConfig;
 import com.snowapp.libnavannotation.FragmentDestination;
 
-@FragmentDestination(pageUrl = "main/tabs/find", asStarter = false)
-public class FindFragment extends Fragment {
-    private static final String TAG = "FindFragment";
+/**
+ * 发现页面
+ */
+@FragmentDestination(pageUrl = "main/tabs/find")
+public class FindFragment extends SofaFragment {
 
-    private FindViewModel findViewModel;
+    @Override
+    public Fragment getTabFragment(int position) {
+        SofaTab.Tabs tab = getTabConfig().tabs.get(position);
+        TagListFragment fragment = TagListFragment.newInstance(tab.tag);
+        return fragment;
+    }
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        Log.d(TAG, "onCreateView");
-        findViewModel =
-                ViewModelProviders.of(this).get(FindViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_find, container, false);
-        final TextView textView = root.findViewById(R.id.text_find);
-        findViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+    @Override
+    public void onAttachFragment(@NonNull Fragment childFragment) {
+        super.onAttachFragment(childFragment);
+        String tagType = childFragment.getArguments().getString(TagListFragment.KEY_TAG_TYPE);
+        if (TextUtils.equals(tagType, "onlyFollow")) {
+            // 切换为 "关注" 标签列表页面
+            ViewModelProviders.of(childFragment).get(TagListViewModel.class)
+                    .getSwitchTabLiveData().observe(this,
+                    object -> viewPager2.setCurrentItem(1));
+        }
+    }
+
+    @Override
+    public SofaTab getTabConfig() {
+        return AppConfig.getFindTabConfig();
     }
 }
