@@ -60,8 +60,7 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
         return new FeedAdapter(getContext(), feedType){
             // item 进入屏幕
             @Override
-            public void onViewAttachedToWindow(@NonNull ViewHolder holder) {
-                super.onViewAttachedToWindow(holder);
+            public void onViewAttachedToWindow2(@NonNull ViewHolder holder) {
                 if (holder.isVideoItem()) {
                     playDetector.addTarget(holder.getListPlayerView());
                 }
@@ -69,8 +68,7 @@ public class HomeFragment extends AbsListFragment<Feed, HomeViewModel> {
 
             // item 离开屏幕
             @Override
-            public void onViewDetachedFromWindow(@NonNull ViewHolder holder) {
-                super.onViewDetachedFromWindow(holder);
+            public void onViewDetachedFromWindow2(@NonNull ViewHolder holder) {
                 playDetector.removeTarget(holder.getListPlayerView());
             }
 
