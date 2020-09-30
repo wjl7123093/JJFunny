@@ -51,7 +51,6 @@ import java.util.Map;
 /**
  * 视频录制页面
  */
-@ActivityDestination(pageUrl = "main/tabs/publish", asStarter = false)
 public class CaptureActivity extends AppCompatActivity {
     public static final int REQ_CAPTURE = 10001;
     private ActivityLayoutCaptureBinding mBinding;
