@@ -53,6 +53,8 @@
         <activity android:name=".ui.detail.FeedDetailActivity"
             android:theme="@style/feedDetail"></activity>
 
+        <activity android:name=".ui.find.TagFeedListActivity"></activity>
+
 
         <!-- 注册SDKActivity -->
         <activity
